@@ -8,7 +8,7 @@
  * @number: data to insert
  * Return: address of new node
  */
-listint_t *insert_node(listint_t **head, int number);
+listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *new_node;
 	listint_t *tmp;
@@ -29,18 +29,18 @@ listint_t *insert_node(listint_t **head, int number);
 
 	while (tmp->next != NULL)
 	{
-		if ((runner->next)->n >= number)
+		if ((tmp->next)->n >= number)
 		{
 			new_node->next = tmp->next;
 			tmp->next = new_node;
-			return (new);
+			return (new_node);
 		}
 		tmp = tmp->next;
 	}
 
 	new_node->next = NULL;
-	tmp->next = new;
-	return (new);
+	tmp->next = new_node;
+	return (new_node);
 }
 
 
