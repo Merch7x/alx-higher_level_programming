@@ -72,4 +72,4 @@ class Rectangle:
     def __del__(self):
         """Deletes an instance of the Rectangle"""
         dot = "."
-        print("Bye Rectangle{}{}{}".format(dot, dot, dot))
+        print("Bye rectangle{}{}{}".format(dot, dot, dot))
