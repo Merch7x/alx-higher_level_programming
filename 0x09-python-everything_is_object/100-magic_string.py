@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-string = []
-
-
 def magic_string():
-    string.append("bet")
-    return ("BestSchool, " * len(string)).removesuffix(", ")
+    setattr(magic_string, 'count', getattr(magic_string, 'count', 0) + 1)
+    return ("BestSchool, " * magic_string.count).removesuffix(", ")
