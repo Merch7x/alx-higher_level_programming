@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""Add attributes to an object"""
+
+
 def add_attribute(obj, attribute_name, attribute_value):
     """Adds a new attribute to an object if possible,
     raises TypeError Otherwise.
