@@ -1,5 +1,6 @@
 def add_attribute(obj, attribute_name, attribute_value):
-    """Adds a new attribute to an object if possible, raises TypeError otherwise.
+    """Adds a new attribute to an object if possible,
+    raises TypeError Otherwise.
 
     Args:
         obj: The object to which the attribute should be added.
