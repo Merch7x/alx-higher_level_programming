@@ -20,4 +20,4 @@ class BaseGeometry:
             raise TypeError(f"{self.name} must be an integer")
         elif value <= 0:
             raise ValueError(f"{self.name} must be greater than 0")
-        self.value = value
+        return value
