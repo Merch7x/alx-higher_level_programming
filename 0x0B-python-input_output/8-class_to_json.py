@@ -2,9 +2,6 @@
 """encode a class instnace to json"""
 
 
-import json
-
-
 def class_to_json(obj):
     """serialize a class instance object to json
 
