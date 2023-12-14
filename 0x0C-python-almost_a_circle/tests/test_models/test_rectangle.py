@@ -15,6 +15,6 @@ class TestRectangle(unittest.TestCase):
     
     def test_constructor_superclass_id(self):
         """Test object creation of an attribute from a superclass"""
-        obj = Rectangle(height=15, width=9, x=7, y=9, id=22)
+        obj = Rectangle(height=15, width=9, x=7, y=9, id=None)
         self.assertIsInstance(obj, Rectangle)
 
