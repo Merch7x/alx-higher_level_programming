@@ -80,10 +80,11 @@ class Rectangle(Base):
         """display the area of rectangle as #"""
         rectangle = []
         if self.__height == 0 or self.__width == 0:
-            return ("")
-
-        for i in range(self.__height):
-            [rectangle.append("#") for j in range(self.__width)]
-            if i != self.__height - 1:
-                rectangle.append("\n")
-        return ("".join(rectangle))
+            print("")
+            return
+        
+        [print("") for y in range(self.y)]
+        for i in range(self.height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.width)]
+            print("")
