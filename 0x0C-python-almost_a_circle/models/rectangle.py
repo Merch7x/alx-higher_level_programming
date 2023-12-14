@@ -1,4 +1,5 @@
-"""Ctreates a class rectangle"""
+#!/usr/bin/python3
+"""Creates a class rectangle"""
 from models.base import Base
 
 
