@@ -33,7 +33,6 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         self.__width = value
 
-
     @property
     def height(self):
         """Gets the value of self and modifys it through a setter"""
