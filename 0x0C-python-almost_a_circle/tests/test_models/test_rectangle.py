@@ -46,5 +46,10 @@ class TestRectangle(unittest.TestCase):
             obj = Rectangle(height=20, width=10, x=-1, y=6)
         with self.assertRaises(ValueError):
             obj = Rectangle(height=20, width=10, x=7, y=-4)
+    
+    def test_area(self):
+        """Test area is computed"""
+        obj = Rectangle(height=10, width=5)
+        self.assertEqual(area(obj.height, obj.width), 50)
 
 
