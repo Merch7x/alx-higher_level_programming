@@ -14,7 +14,7 @@ class Rectangle(Base):
           x (int)
           y (int)
         """
-        super().__init__()
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
@@ -75,3 +75,15 @@ class Rectangle(Base):
     def area(self):
         """Computes the area of the rectangle"""
         return self.__height * self.__width
+    
+    def display(self):
+        """display the area of rectangle as #"""
+        rectangle = []
+        if self.__height == 0 or self.__width == 0:
+            return ("")
+
+        for i in range(self.__height):
+            [rectangle.append("#") for j in range(self.__width)]            
+            if i != self.__height - 1:
+                rectangle.append("\n")
+        return ("".join(rectangle))
