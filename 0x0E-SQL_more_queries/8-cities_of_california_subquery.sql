@@ -1,4 +1,4 @@
 -- lists all records
-SELECT id, name FROM states, cities
-WHERE states.id=cities.state_id
-ORDER BY cities.id ASC;
+SELECT id, name FROM cities
+WHERE state_id = (SELECT id FROM states WHERE name = 'California')
+ORDER BY id ASC;
