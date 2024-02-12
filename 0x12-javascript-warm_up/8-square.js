@@ -4,7 +4,10 @@ const letter = 'X';
 
 if (!argv) {
   console.log('Missing size');
-} else if (argv <= 0) {
+} else if (isNaN(argv)) {
+  console.log('Missing size');
+}
+else if (argv <= 0) {
   process.exit();
 } else {
   for (let i = 0; i < argv; i++) {
