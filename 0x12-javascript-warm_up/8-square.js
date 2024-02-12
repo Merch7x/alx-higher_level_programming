@@ -8,9 +8,10 @@ if (!argv) {
   process.exit();
 } else {
   for (let i = 0; i < argv; i++) {
+    let row = '';
     for (let j = 0; j < argv; j++) {
-      process.stdout.write(letter);
+      row += letter;
     }
-    console.log();
+    console.log(row);
   }
 }
