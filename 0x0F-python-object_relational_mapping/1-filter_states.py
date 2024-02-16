@@ -11,7 +11,8 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     try:
-        cur.execute("SELECT * FROM `states` WHERE name REGEXP '^N'")
+        cur.execute(
+            "SELECT * FROM `states` WHERE name REGEXP '^N' ORDER BY id ASC")
         [print(state) for state in cur.fetchall()]
     except MySQLdb.Error as e:
         print("Error:", e)
