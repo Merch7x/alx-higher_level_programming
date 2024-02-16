@@ -21,7 +21,13 @@ if __name__ == "__main__":
                 FROM cities\
                     INNER JOIN states ON cities.state_id = states.id\
                         WHERE states.name = '{}'".format(sys.argv[4]))
-        [print(city) for city in cur.fetchall()]
+        rows = cur.fetchall()
+        frows = []
+
+        for row in rows:
+            frows.append(", ".join(map(str, row)))
+
+        print(", ".join(frows))
     except MySQLdb.Error as e:
         print("Error:", e)
 
