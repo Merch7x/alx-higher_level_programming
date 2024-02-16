@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" lists all State objects that contain the letter a
+""" prints the State object with the name passed as argument
 """
 import sys
 from model_state import Base, State
