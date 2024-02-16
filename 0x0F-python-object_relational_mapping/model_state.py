@@ -1,5 +1,5 @@
-#!/usr/bin/python
-""" Creates a class State"""
+#!/usr/bin/python3
+""" Define a database model"""
 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
@@ -12,6 +12,7 @@ Base = declarative_base()
 class State(Base):
     """Creates a State object
       Inherits from the Base of sqlalchemy
+
        """
     __tablename__ = 'states'
     id = Column(Integer, autoincrement=True, nullable=False, primary_key=True)
