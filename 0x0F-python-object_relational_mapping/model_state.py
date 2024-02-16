@@ -2,10 +2,10 @@
 """ Creates a class State"""
 
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import create_engine, Column, Integer, String
+from sqlalchemy import Column, Integer, String
 # from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('mysql+mysqldb://tim:tim@localhost/hbtn_0e_6_usa')
+# engine = create_engine('mysql+mysqldb://tim:tim@localhost/hbtn_0e_6_usa')
 Base = declarative_base()
 
 
