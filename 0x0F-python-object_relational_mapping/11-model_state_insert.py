@@ -14,12 +14,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
 
     with Session() as session:
-        new_state = State(id=6, name="Louisiana")
+        new_state = State(name="Louisiana")
         session.add(new_state)
         session.commit()
-
-        states = session.query(State).filter_by(name="Louisiana")
-
-        if states:
-            for state in states:
-                print("{}".format(state.id))
+        print(new_state.id)
