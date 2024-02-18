@@ -8,7 +8,7 @@ import sys
 
 
 class City(Base):
-    """Creates city objects 
+    """Creates city objects
       Superclass is sqlalchemy's base class
     """
     __tablename__ = 'cities'
