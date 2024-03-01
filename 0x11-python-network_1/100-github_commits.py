@@ -14,4 +14,4 @@ if __name__ == '__main__':
     data = req.json()
 
     for commit in data[-10:]:
-        print(f"{commit.get('sha')}: {commit.get('authors')}")
+        print(f"{commit.get('sha')}: {commit.get('commit')['author']['name']}")
