@@ -2,6 +2,7 @@
 """
 This script connects the github api and fetches commits
 from a specified repository
+its prints out the sha of the commit and the commiters name
  """
 from requests.auth import HTTPBasicAuth
 import sys
