@@ -13,5 +13,8 @@ if __name__ == '__main__':
         f'https://api.github.com/repos/{sys.argv[1]}/{sys.argv[2]}/commits')
     data = req.json()
 
-    for x in range(10):
-        print(f"{data[x].get('sha')}: {data[x].get('commit').get('author').get('name')}")
+    try:
+        for x in range(10):
+            print(f"{data[x].get('sha')}: {data[x].get('commit').get('author').get('name')}")
+    except IndexError:
+        pass
