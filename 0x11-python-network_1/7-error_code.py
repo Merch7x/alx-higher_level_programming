@@ -12,3 +12,5 @@ if __name__ == '__main__':
     status = req.status_code
     if status >= 400:
         print(f'Error code: {status}')
+    else:
+        print(req.text)
