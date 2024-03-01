@@ -13,5 +13,5 @@ if __name__ == '__main__':
         f'https://api.github.com/repos/{sys.argv[1]}/{sys.argv[2]}/commits')
     data = req.json()
 
-    for commit in data[:10]:
-        print(f"{commit.get('sha')}: {commit.get('commit')['author']['name']}")
+    for x in range(10):
+        print(f"{data[x].get('sha')}: {data[x].get('commit').get('author').get('name')}")
