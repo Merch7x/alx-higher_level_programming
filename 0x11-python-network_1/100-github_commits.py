@@ -15,6 +15,8 @@ if __name__ == '__main__':
 
     try:
         for x in range(10):
-            print(f"{data[x].get('sha')}: {data[x].get('commit').get('author').get('name')}")
+            print("{}: {}".format(
+                data[x].get('sha'),
+                data[x].get('commit').get('author').get('name')))
     except IndexError:
         pass
