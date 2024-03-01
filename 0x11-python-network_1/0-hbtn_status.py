@@ -10,11 +10,10 @@ if __name__ == '__main__':
     try:
         with urlopen(req) as response:
             content = response.read()
-            body = f"""Body response:
-            - type: {type(content)}
-            - content: {content}
-            - utf8 content: {content.decode("utf-8")}"""
-            print(body)
+            print("Body response:")
+            print("\t- type: {}".format(type(content)))
+            print("\t- content: {}".format(content))
+            print("\t- utf8 content: {}".format(content.decode(encoding='utf-8')))
     except URLError as e:
         if hasattr(e, 'reason'):
             print(e.reason)
