@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-script that takes your GitHub credentials (username and password)
-and uses the GitHub API to display your id
+This script connects the github api and fetches commits
+from a specified repository
  """
 from requests.auth import HTTPBasicAuth
 import sys
