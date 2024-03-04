@@ -7,7 +7,6 @@ its prints out the sha of the commit and the commiters name
 import sys
 import requests
 
-
 if __name__ == '__main__':
     req = requests.get(
         f'https://api.github.com/repos/{sys.argv[1]}/{sys.argv[2]}/commits')
