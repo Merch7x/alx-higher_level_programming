@@ -3,7 +3,7 @@
 This script connects the github api and fetches commits
 from a specified repository
 its prints out the sha of the commit and the commiters name
- """
+"""
 import sys
 import requests
 
