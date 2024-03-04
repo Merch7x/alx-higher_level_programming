@@ -7,16 +7,25 @@ its prints out the sha of the commit and the commiters name
 import sys
 import requests
 
-
 if __name__ == '__main__':
-    req = requests.get(
-        f'https://api.github.com/repos/{sys.argv[1]}/{sys.argv[2]}/commits')
-    data = req.json()
+    owner = sys.argv[1]
+    repo = sys.argv[2]
+
+    url = f'https://api.github.com/repos/{owner}/{repo}/commits'
 
     try:
-        for x in range(10):
-            print("{}: {}".format(
-                data[x].get('sha'),
-                data[x].get('commit').get('author').get('name')))
+        req = requests.get(url)
+        req.raise_for_status()  # Raise an HTTPError for bad responses
+
+        data = req.json()
+
+        for x in range(min(10, len(data))):
+            commit = data[x]
+            sha = commit.get('sha')
+            author_name = commit.get('commit').get('author').get('name')
+            print("{}: {}".format(sha, author_name))
+
+    except requests.exceptions.RequestException as e:
+        print(f"Error making HTTP request: {e}")
     except IndexError:
-        pass
+        print("Less than 10 commits available.")
