@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+
 """
 This script connects the github api and fetches commits
 from a specified repository
